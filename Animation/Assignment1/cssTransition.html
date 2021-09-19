@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        background-color: red;
+      }
+      .box1:hover {
+        transform: scaleX(1.2);
+        background-color: aqua;
+        transition: 5s;
+      }
+      .box2 {
+        width: 400px;
+        height: 160px;
+        margin: 20px auto;
+        padding: 20px;
+        display: flex;
+        border: 1px solid gray;
+      }
+      .box2 div {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        background-color: blueviolet;
+        animation: onload 5s linear;
+        animation-delay: 1s;
+      }
+
+      @keyframes onload {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .box3 {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        position: absolute;
+        background-color: rgb(174, 243, 117);
+        left: 50%;
+        animation: slide 5s linear;
+      }
+      @keyframes slide {
+        0% {
+          opacity: 0;
+          left: 50%;
+        }
+        25% {
+          opacity: 0.2;
+          left: 45%;
+        }
+        50% {
+          opacity: 0.5;
+          left: 40%;
+        }
+        75% {
+          opacity: 0.8;
+          left: 35%;
+        }
+        100% {
+          opacity: 1;
+          left: 30%;
+        }
+      }
+      .box4 {
+        width: 100px;
+        height: 100px;
+        margin: 50vh auto;
+        background-color: rgb(114, 140, 228);
+      }
+      .box4:hover {
+        animation: rotate 1s linear;
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .box5 {
+        width: 100px;
+        height: 100px;
+        margin: 100px auto;
+        background-color: rgb(241, 160, 93);
+      }
+      .box5:hover {
+        animation: infinite changeCircle 1s linear;
+      }
+      @keyframes changeCircle {
+        0% {
+          border-radius: 0px;
+        }
+        50% {
+          border-radius: 25px;
+        }
+        100% {
+          border-radius: 75px;
+        }
+      }
+      .box6 {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        background-color: rgb(57, 89, 158);
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        animation: infinite slideEasing 5s ease;
+      }
+      .box7 {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        background-color: rgb(57, 89, 158);
+        position: absolute;
+        left: 50%;
+        top: 200px;
+        animation: infinite slideEasing 5s ease-in;
+      }
+      .box8 {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        background-color: rgb(57, 89, 158);
+        position: absolute;
+        left: 50%;
+        top: 400px;
+        animation: infinite slideEasing 5s ease-out;
+      }
+      .box9 {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        background-color: rgb(57, 89, 158);
+        position: absolute;
+        left: 50%;
+        top: 600px;
+        animation: infinite slideEasing 5s ease-in-out;
+      }
+      .box10 {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        background-color: rgb(57, 89, 158);
+        position: absolute;
+        left: 50%;
+        top: 800px;
+        animation: infinite slideEasing 5s linear;
+      }
+      .box11 {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        background-color: rgb(57, 89, 158);
+        position: absolute;
+        left: 50%;
+        top: 1000px;
+        animation: infinite slideEasing 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .box12 {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        background-color: rgb(57, 89, 158);
+        position: absolute;
+        left: 50%;
+        top: 1200px;
+        animation: infinite slideEasing 5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .box13 {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        background-color: rgb(57, 89, 158);
+        position: absolute;
+        left: 50%;
+        top: 1400px;
+        animation: infinite slideEasing 5s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+      @keyframes slideEasing {
+        0% {
+          left: 50%;
+        }
+        25% {
+          left: 45%;
+        }
+        50% {
+          left: 40%;
+        }
+        75% {
+          left: 35%;
+        }
+        100% {
+          left: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- Problem 1 -->
+      <div class="box1"></div>
+
+      <!-- Problem 2 -->
+      <div class="box2">
+        <div></div>
+        <div></div>
+      </div>
+
+      <!-- Problem 3 -->
+      <div class="box3"></div>
+
+      <!-- Problem 4 -->
+      <div class="box4"></div>
+
+      <!-- Problem 5 -->
+      <div class="box5"></div>
+      <!-- Problem 6 -->
+      <!-- <div class="box6"></div>
+      <div class="box7"></div>
+      <div class="box8"></div>
+      <div class="box9"></div>
+      <div class="box10"></div>
+      <div class="box11"></div>
+      <div class="box12"></div>
+      <div class="box13"></div> -->
+    </div>
+  </body>
+</html>
